@@ -8,11 +8,11 @@ with open('./requirements.txt') as requirements_file:
 
 setuptools.setup(
     name='cl-runtime',
-    version='1.0.0',
+    version='2.0.0',
     author='CompatibL',
     author_email='support@compatibl.com',
     description='CompatibL Runtime Community Edition',
-    long_description=readme
+    long_description=readme,
     long_description_content_type="text/markdown",
     install_requires=requirements,
     packages=setuptools.find_namespace_packages(where='.', include=['cl.runtime*']),
