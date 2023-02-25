@@ -15,7 +15,11 @@ setuptools.setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     install_requires=requirements,
-    packages=setuptools.find_namespace_packages(where='.', include=['cl.runtime*']),
+    url="https://www.compatibl.com",
+    project_urls={
+        'Source Code': 'https://github.com/compatibl/cl-runtime',
+    },
+    packages=setuptools.find_namespace_packages(where='.', include=['cl.runtime*'], exclude=['tests', 'tests.*']),
     package_dir={'': '.'},
     classifiers=[
         # Alpha - will attempt to avoid breaking changes but they remain possible
@@ -24,8 +28,7 @@ setuptools.setup(
         # Audience and topic
         'Intended Audience :: Developers',
         'Topic :: Software Development',
-        'Topic :: Software Development :: Libraries',
-        'Topic :: Software Development :: Libraries :: Application Frameworks',
+        'Topic :: Scientific/Engineering',
 
         # License
         "License :: OSI Approved :: Apache Software License",
